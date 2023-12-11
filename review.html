@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>Королевство Сладостей</title>
+    <link rel="icon" type="image/png" href="media/icon.png">
+    <link rel="stylesheet" href="styles/style_header_footer.css">
+    <link rel="stylesheet" href="styles/style_review.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Oswald:wght@600&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <script src="scripts/cleave.min.js"></script>
+    <script src="scripts/cleave-phone.ru.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="media/icon.png" alt="Логотип сайта" height="80px">
+        <h1>Королевство Сладостей</h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="index.html">Продукция</a></li>
+                <li><a href="excur.html">Экскурсия</a></li>
+                <li><a href="vakan.html">Вакансии</a></li>
+                <li><a href="review.html">Связаться с нами</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox">
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        <ul class="menu__box">
+            <li><a class="menu__item" href="about.html">О нас</a></li>
+            <li><a class="menu__item" href="index.html">Продукция</a></li>
+            <li><a class="menu__item" href="excur.html">Экскурсия</a></li>
+            <li><a class="menu__item" href="vakan.html">Вакансии</a></li>
+            <li><a class="menu__item" href="review.html">Связаться с нами</a></li>
+        </ul>
+    </div>
+    <main>
+        <h2 id="main_h">СВЯЗАТЬСЯ С НАМИ</h2>
+
+        <div class="form-container">
+            <form class="contact-form">
+                <div class="input-group name">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group family">
+                    <label for="surname">Фамилия:</label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+                <div class="input-group mail">
+                    <label for="email">Почта:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group phone">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <script>
+                    var cleave = new Cleave('#phone', {
+                        phone: true,
+                        phoneRegionCode: 'RU'
+                    });
+                </script>
+                <div class="input-group msg">
+                    <label for="message">Напишите ваше сообщение здесь:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="but_sub">Отправить</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="grid_foot">
+            <div class="about_foot">
+                <h4>О нас</h4>
+                <p>Королевство Сладостей — место, где шоколад становится волшебством! Мы с любовью создаем каждый
+                    кусочек, чтобы приносить вам удовольствие и великолепный вкус. В нашем королевстве каждый шоколад —
+                    это история, наполненная страстью и вниманием к деталям. Присоединяйтесь к нам в путешествии по миру
+                    сладких наслаждений!</p>
+            </div>
+            <div class="links_foot">
+                <h4>Ссылки</h4>
+                <ul>
+                    <li><a href="#" class="btn_f"><img src="media/youtube.png" width="40px"></a></li>
+                    <li><a href="#" class="btn_f"><img src="media/vk.png" width="40px"></a></li>
+                    <li><a href="#" class="btn_f"><img src="media/teleg.png" width="40px"></a></li>
+                </ul>
+            </div>
+            <div class="shop_foot">
+                <h4>Магазин</h4>
+                <ul>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="index.html">Продукция</a></li>
+                    <li><a href="excur.html">Экскурсия</a></li>
+                    <li><a href="vakan.html">Вакансии</a></li>
+                    <li><a href="review.html">Связаться с нами</a></li>
+                </ul>
+            </div>
+            <div class="contacts_foot">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="#">78, ул. Вернадского, г. Москва, Россия</a></li>
+                    <li><a href="#">+7 543 236-53-26</a></li>
+                    <li><a href="#">example@mail.ru</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>Королевство Сладостей</title>
+    <link rel="icon" type="image/png" href="media/icon.png">
+    <link rel="stylesheet" href="styles/style_header_footer.css">
+    <link rel="stylesheet" href="styles/style_vacan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Oswald:wght@600&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <script src="scripts/cleave.min.js"></script>
+    <script src="scripts/cleave-phone.ru.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="media/icon.png" alt="Логотип сайта" height="80px">
+        <h1 id="first_h1">Королевство Сладостей</h1>
+        <h1 id="second_h1">Королевство<br>Сладостей</h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="index.html">Продукция</a></li>
+                <li><a href="excur.html">Экскурсия</a></li>
+                <li><a href="vakan.html">Вакансии</a></li>
+                <li><a href="review.html">Связаться с нами</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox">
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        <ul class="menu__box">
+            <li><a class="menu__item" href="about.html">О нас</a></li>
+            <li><a class="menu__item" href="index.html">Продукция</a></li>
+            <li><a class="menu__item" href="excur.html">Экскурсия</a></li>
+            <li><a class="menu__item" href="vakan.html">Вакансии</a></li>
+            <li><a class="menu__item" href="review.html">Связаться с нами</a></li>
+        </ul>
+    </div>
+    <main>
+        <h2>ВАКАНСИИ</h2>
+        <nav id="vacan_list">
+            <a href="#worker">
+                <div class="one-vacan">
+                    <span class="vacan_name">Производственный рабочий</span>
+                </div>
+            </a>
+            <a href="#oper">
+                <div class="one-vacan">
+                    <span class="vacan_name">Оператор производственных линий</span>
+                </div>
+            </a>
+            <a href="#clean">
+                <div class="one-vacan">
+                    <span class="vacan_name">Уборщик</span>
+                </div>
+            </a>
+            <a href="#manag">
+                <div class="one-vacan">
+                    <span class="vacan_name">Менеджер</span>
+                </div>
+            </a>
+            <a href="#market">
+                <div class="one-vacan">
+                    <span class="vacan_name">Маркетолог</span>
+                </div>
+            </a>
+            <a href="#project1">
+                <div class="one-vacan">
+                    <span class="vacan_name">Проектный менеджер</span>
+                </div>
+            </a>
+        </nav>
+
+        <section class="vacan" id="worker">
+            <h3>Производственный рабочий</h3>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/worker_icon.jpg"></div>
+                <span class="vacan-desc">Производственные рабочие на шоколадной фабрике отвечают за процесс производства
+                    шоколада. Они участвуют в сборе ингредиентов, приготовлении шоколада, упаковке продукции и ее
+                    транспортировке</span>
+            </div>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/req_icon.jpg"></div>
+                <ul class="treb">
+                    <li>Понимание основных правил безопасности и мер предосторожности</li>
+                    <li>Опыт работы на производстве или в подобной роли в складе</li>
+                </ul>
+            </div>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/cenn_icon.jpg"></div>
+                <span class="vacan-zarp">20.000</span>
+            </div>
+            <button class="zayav" data-vacan-id="worker_r">Оставить заявку</button>
+        </section>
+
+        <section class="vacan" id="oper">
+            <h3>Оператор производственных линий</h3>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/oper_icon.jpg"></div>
+                <span class="vacan-desc">Операторы производственных линий управляют оборудованием на производственной
+                    линии, контролируют качество продукции и обеспечивают соблюдение стандартов производства</span>
+            </div>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/req_icon.jpg"></div>
+                <ul class="treb">
+                    <li>Опыт работы с оборудованием на производственной линии</li>
+                    <li>Способность к анализу методов и времени, связанных с производственными операциями</li>
+                </ul>
+            </div>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/cenn_icon.jpg"></div>
+                <span class="vacan-zarp">30.000</span>
+            </div>
+            <button class="zayav" data-vacan-id="oper_r">Оставить заявку</button>
+        </section>
+
+        <section class="vacan" id="clean">
+            <h3>Уборщик</h3>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/clean_icon.jpg"></div>
+                <span class="vacan-desc">Уборщики отвечают за поддержание чистоты и порядка на производственной
+                    площадке. Они выполняют уборку в помещениях от отходов производства и мусора, очищают поверхности от
+                    пыли, моют вручную или с применением инструментов механизации</span>
+            </div>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/req_icon.jpg"></div>
+                <ul class="treb">
+                    <li>Навыки уборки и очистки</li>
+                    <li>Способность работать в условиях производственной площадки</li>
+                </ul>
+            </div>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/cenn_icon.jpg"></div>
+                <span class="vacan-zarp">20.000</span>
+            </div>
+            <button class="zayav" data-vacan-id="clean_r">Оставить заявку</button>
+        </section>
+
+        <section class="vacan" id="manag">
+            <h3>Менеджер</h3>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/manag_icon.jpg"></div>
+                <span class="vacan-desc">Менеджеры на шоколадной фабрике могут отвечать за управление производственным
+                    процессом, контроль качества продукции, управление персоналом и другие аспекты работы фабрики</span>
+            </div>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/req_icon.jpg"></div>
+                <ul class="treb">
+                    <li>Опыт управления персоналом</li>
+                    <li>Способность к координации и планированию</li>
+                </ul>
+            </div>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/cenn_icon.jpg"></div>
+                <span class="vacan-zarp">50.000</span>
+            </div>
+            <button class="zayav" data-vacan-id="manag_r">Оставить заявку</button>
+        </section>
+
+        <section class="vacan" id="market">
+            <h3>Маркетолог</h3>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/market_icon.jpg"></div>
+                <span class="vacan-desc">Маркетологи работают над продвижением продукции, исследованием рынка и
+                    разработкой стратегий маркетинга. Они могут отвечать за разработку и реализацию маркетинговых
+                    кампаний, анализ рынка, анализ конкурентов и т.д.</span>
+            </div>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/req_icon.jpg"></div>
+                <ul class="treb">
+                    <li>Опыт работы в маркетинге и продвижении продукции</li>
+                    <li>Способность к анализу рынка и конкурентов</li>
+                </ul>
+            </div>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/cenn_icon.jpg"></div>
+                <span class="vacan-zarp">60.000</span>
+            </div>
+            <button class="zayav" data-vacan-id="market_r">Оставить заявку</button>
+        </section>
+
+        <section class="vacan" id="project1">
+            <h3>Проектный менеджер</h3>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/project_icon.jpg"></div>
+                <span class="vacan-desc">Проектные менеджеры могут отвечать за координацию проектов на фабрике, включая
+                    планирование, контроль качества и сроков. Они могут также отвечать за взаимодействие с другими
+                    отделами и внешними партнерами</span>
+            </div>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/req_icon.jpg"></div>
+                <ul class="treb">
+                    <li>Опыт управления проектами</li>
+                    <li>Способность к планированию и контролю качества</li>
+                </ul>
+            </div>
+            <div class="sec_desc">
+                <div class="img_div"><img src="media/cenn_icon.jpg"></div>
+                <span class="vacan-zarp">50.000</span>
+            </div>
+            <button class="zayav" data-vacan-id="project_r">Оставить заявку</button>
+        </section>
+        <div class="vacan_form_div" id="vacan_form_div">
+            <div class="vacan_form_cont">
+                <button class="vacan_form_exit"></button>
+                <h3>Оставить заявку</h3>
+                <form class="vacan_form">
+                    <input type="text" id="name" name="name" required placeholder="Ваше имя:">
+                    <div id="tel_div">
+                        <input type="tel" id="phoneInput" name="phone" placeholder="Ваш номер телефона: " required>
+                    </div>
+                    <input type="email" id="email" name="email" required placeholder="Ваша почта:">
+                    <div class="input-group radio">
+                        <label>Производственный рабочий
+                            <input type="radio" name="vacan" id="worker_r" value="worker">
+                        </label>
+
+                        <label>Оператор производственных линий
+                            <input type="radio" name="vacan" id="oper_r" value="oper">
+                        </label>
+
+                        <label>Уборщик
+                            <input type="radio" name="vacan" id="clean_r" value="clean">
+                        </label>
+
+                        <label>Менеджер
+                            <input type="radio" name="vacan" id="manag_r" value="manag">
+                        </label>
+
+                        <label>Маркетолог
+                            <input type="radio" name="vacan" id="market_r" value="market">
+                        </label>
+
+                        <label>Проектный менеджер
+                            <input type="radio" name="vacan" id="project_r" value="project">
+                        </label>
+                    </div>
+                    <button type="submit" class="but_sub">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="grid_foot">
+            <div class="about_foot">
+                <h4>О нас</h4>
+                <p>Королевство Сладостей — место, где шоколад становится волшебством! Мы с любовью создаем каждый
+                    кусочек, чтобы приносить вам удовольствие и великолепный вкус. В нашем королевстве каждый шоколад —
+                    это история, наполненная страстью и вниманием к деталям. Присоединяйтесь к нам в путешествии по миру
+                    сладких наслаждений!</p>
+            </div>
+            <div class="links_foot">
+                <h4>Ссылки</h4>
+                <ul>
+                    <li><a href="#" class="btn_f"><img src="media/youtube.png" width="40px"></a></li>
+                    <li><a href="#" class="btn_f"><img src="media/vk.png" width="40px"></a></li>
+                    <li><a href="#" class="btn_f"><img src="media/teleg.png" width="40px"></a></li>
+                </ul>
+            </div>
+            <div class="shop_foot">
+                <h4>Магазин</h4>
+                <ul>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="index.html">Продукция</a></li>
+                    <li><a href="excur.html">Экскурсия</a></li>
+                    <li><a href="vakan.html">Вакансии</a></li>
+                    <li><a href="review.html">Связаться с нами</a></li>
+                </ul>
+            </div>
+            <div class="contacts_foot">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="#">78, ул. Вернадского, г. Москва, Россия</a></li>
+                    <li><a href="#">+7 543 236-53-26</a></li>
+                    <li><a href="#">example@mail.ru</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/script_vacan.js"></script>
+</body>
+
+</html>

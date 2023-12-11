@@ -1,0 +1,310 @@
+main h2 {
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+
+main {
+    margin-top: 60px;
+}
+
+#vacan_list {
+    display: grid;
+    width: 50vw;
+    margin: 60px auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px 15px;
+}
+
+#vacan_list a {
+    height: 100px;
+    width: 100%;
+}
+
+.one-vacan {
+    background-color: rgb(219, 211, 56);
+    border-radius: 20px;
+    font-size: 0.75em;
+    cursor: pointer;
+    transition: background-color .5s;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.one-vacan:hover {
+    background-color: rgb(254, 241, 207);
+}
+
+.vacan {
+    width: 70vw;
+    margin: 80px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 50px;
+    outline: 1px solid rgb(219, 211, 56);
+}
+
+.vacan::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.vacan h3 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.vacan-desc::before {
+    content: "Описание: ";
+}
+
+.treb::before {
+    content: "Что от вас требуется: ";
+}
+
+.vacan-zarp::before {
+    content: "Зарплата: ";
+}
+
+.vacan-zarp::after {
+    content: " руб.";
+}
+
+.zayav {
+    display:block;
+    width: 15vw;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 40px;
+    background: none;
+    border: 1px solid rgb(219, 211, 56);
+    font-size: 1.1em;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.zayav:hover {
+    background-color: rgb(219, 211, 56);
+    color: white;
+}
+
+.img_div {
+    position: relative;
+    margin-right: 30px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.img_div img {
+    height: 100px;
+}
+
+.img_div::after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    bottom: 0;
+    background-color: rgb(219, 211, 56);
+    height: 100%;
+    width: 1px;
+}
+
+.sec_desc {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sec_desc:not(:first-of-type)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -15px;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(219, 211, 56);
+}
+
+.sec_desc:not(:first-of-type) {
+    margin-top: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.vacan_form_div {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    backdrop-filter: brightness(0.2);
+    color:black;
+    /* font-size: 2vw; */
+    justify-content: center;
+    align-items: center;
+}
+
+.vacan_form_cont {
+    width: 40%;
+    min-width: 280px;
+    position: relative;
+    background-color: rgb(255, 248, 228);
+    border: 1px solid yellow;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.vacan_form_exit {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.vacan_form_exit::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+
+.vacan_form_exit::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 1px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+
+.vacan_form_cont h3 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+input {
+    font-size: inherit;
+}
+
+.vacan_form input[type="text"],
+.vacan_form input[type="email"],
+.vacan_form input[type="tel"] {
+    width: 60%;
+    height: 50px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.vacan_form input[type="text"]:focus,
+.vacan_form input[type="email"]:focus,
+.vacan_form input[type="tel"]:focus  {
+    outline: none;
+    border-color: rgb(170, 130, 0);
+}
+
+#tel_div {
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.input-group.radio {
+    width: 70%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 1.3rem;
+}
+
+.input-group.radio::before {
+    content: "Выберете желаемую вакансию:"
+}
+
+.input-group.radio label {
+    position: relative;
+    left: 20px;
+    /* bottom: -50%; */
+}
+
+.input-group.radio input {
+    position: absolute;
+    left: -20px;
+}
+
+.but_sub {
+    width: 50%;
+    height: 30px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+}
+
+.but_sub:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 750px) {
+    #vacan_list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 70vw;
+    }
+}
+
+@media (max-width: 1100px) {
+    .sec_desc {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .img_div::after {
+        display: none;
+    }
+
+    .img_div {
+        margin: 0;
+    }
+}

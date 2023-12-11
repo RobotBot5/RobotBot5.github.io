@@ -1,0 +1,147 @@
+main #main_h {
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+
+main h3 {
+    font-size: 1.4em;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    margin-top: 60px;
+}
+
+main  {
+    margin-top: 60px;
+}
+
+.about_sec {
+    width: 60vw;
+    margin: 0 auto;
+    position: relative;
+}
+
+.about_sec:not(:first-of-type) {
+    display: flex;
+    height: 150px;
+}
+
+.about_sec:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+.video-container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.video-container .overlay {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(0);
+    transition: transform 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+}
+
+.video-container:hover .overlay {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+}
+
+.video-container .overlay h2 {
+    font-size: 2.4rem;
+    margin: 0;
+}
+
+.video-container .overlay p {
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+.history_sec {
+    display: flex;
+    height: 150px;
+}
+
+.icon {
+    height: 100%;
+    width: 150px;
+    position: relative;
+    margin-right: 30px;
+}
+
+.icon img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.icon::after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    bottom: 0;
+    background-color: black;
+    height: 100%;
+    width: 1px;
+}
+
+@media (max-width: 1090px) {
+    .about_sec {
+        width: 80vw;
+    }
+
+    .video-container .overlay h2 {
+        font-size: 2rem;
+    }
+    
+    .video-container .overlay p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .about_sec {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about_sec:not(:first-of-type) {
+        height: auto;
+    }
+
+    .icon::after {
+        display: none;
+    }
+
+    .icon {
+        margin: 0;
+    }
+}
