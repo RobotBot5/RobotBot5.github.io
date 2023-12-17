@@ -1,0 +1,780 @@
+main h2 {
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+
+main h3 {
+    font-size: 1.7em;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+
+main h3:not(:first-of-type) {
+    margin-top: 60px;
+}
+
+main  {
+    margin-top: 60px;
+}
+
+.products {
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.one-product {
+    width: 20%;
+    height: 16vw;
+    background-color: #4c0200;
+    cursor: pointer;
+}
+
+.one-product .div_img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    border: 1px solid black;
+    border-bottom: none;
+    box-sizing: border-box;
+}
+
+.one-product img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition: transform .5s;
+}
+
+.one-product .content {
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 270%;
+}
+
+.one-product:hover img {
+    transform: scale(1.2);
+}
+
+.picked_product_div {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    backdrop-filter: brightness(0.2);
+    color:white;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.picked_product {
+    width: 70%;
+    position: relative;
+    background-color: #4c0200;
+    border: 1px solid white;
+    display: flex;
+    padding: 50px 0;
+    box-sizing: border-box;
+    max-height: 100vh;
+}
+
+.picked_product_exit {
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.picked_product_exit::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+
+.picked_product_exit::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 1px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+
+.picked_product_img_div {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto 0;
+}
+
+.picked_product img {
+    width: 17vw;
+    height: 17vw;
+}
+
+.picked_product_content {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+.picked_product_content h3 {
+    text-align: center;
+}
+
+.desc {
+    margin-top: 50px;
+}
+
+.sost {
+    color: gray;
+    margin-top: 10px;
+}
+
+.sost::before {
+    content: "Состав: ";
+}
+
+.cenn {
+    color: gray;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.cenn::before {
+    content: "Пищевая ценность (на 100г):"
+}
+
+.cenn li {
+    margin-left: 20px;
+}
+
+.cenn li:first-child::after {
+    content: " ккал";
+}
+
+.cenn li:not(:first-child)::after {
+    content: " г";
+}
+
+.cenn li:nth-child(1)::before {
+    content: "Калории: ";
+}
+
+.cenn li:nth-child(2)::before {
+    content: "Белки: ";
+}
+
+.cenn li:nth-child(3)::before {
+    content: "Жиры: ";
+}
+
+.cenn li:nth-child(4)::before {
+    content: "Углеводы: ";
+}
+
+.cenn li:nth-child(5)::before {
+    content: "Сахар: ";
+}
+
+.cart {
+    max-width: 70vw;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+.input-group {
+    padding: 10px;
+    text-align: left;
+ }
+ 
+ label {
+    display: block;
+    margin-bottom: 5px;
+ }
+ 
+ input[type="text"],
+ input[type="email"],
+ input[type="tel"],
+ textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, transform 0.3s;
+    transform: scale(1);
+    box-sizing: border-box;
+ }
+ 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    transform: scale(1.03);
+}
+
+.but_sub {
+    width: 50%;
+    height: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+}
+
+.but_sub:hover {
+    background-color: #0056b3;
+}
+ 
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+ }
+ 
+.cart-item {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+}
+
+#naming-item {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    text-align: center;
+}
+
+.cart_img_div {
+    width: 10%;
+    min-width: 100px;
+}
+
+#naming_div1 {
+    width: 10%;
+    min-width: 100px;
+}
+
+.cart-item img {
+    width: 100%;
+}
+
+.cart-item h4 {
+    margin: 0;
+    /* position: relative; */
+    /* left: -5%; */
+    width: 20%;
+    padding: 0;
+}
+
+#naming_title {
+    width: 20%;
+    margin: auto 0;
+}
+
+#naming_cost_by_one, #naming_total_cost {
+    width: 10%;
+    margin: auto 0;
+    word-wrap: normal;
+}
+
+#naming_quantity {
+    width: 15%;
+    margin: auto 0;
+}
+
+/* .cart-item h4::after {
+    content: "";
+    position: absolute;
+    right: -40%;
+    height: 100%;
+    width: 1px;
+    background-color: grey;
+    top: 0;
+    filter: blur(1px);
+} */
+
+.cart-item .p_total_price, .cart-item .p_one_price {
+    width: 10%;
+    margin: auto 0;
+    text-align: center;
+    /* line-height: 150px; */
+    /* position: relative; */
+    word-wrap: nowrap;
+}
+
+.p_quantity {
+    /* line-height: 150px; */
+    margin: auto 0;
+    word-wrap: nowrap;
+}
+
+.cart-item .div_quantity {
+    width: 15%;
+    margin: 0;
+    text-align: center;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .cart-item .div_quantity::after {
+    content: "";
+    position: absolute;
+    right: -20%;
+    height: 100%;
+    width: 1px;
+    background-color: grey;
+    top: 0;
+    filter: blur(1px);
+} */
+
+.cart_item_minus,
+.cart_item_plus {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    background: none;
+}
+
+.cart_item_minus::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    left: 15.5%;
+    top: 50%;
+    background-color: black;
+    height: 1px;
+}
+
+.cart_item_plus::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    left: 15.5%;
+    top: 50%;
+    background-color: black;
+    height: 1px;
+}
+
+.cart_item_plus::after {
+    content: "";
+    position: absolute;
+    height: 70%;
+    top: 15.5%;
+    left: 50%;
+    background-color: black;
+    width: 1px;
+}
+
+
+/* .cart-item .p_total_price::after, .cart-item .p_one_price::after {
+    content: "";
+    position: absolute;
+    right: -50%;
+    height: 150px;
+    width: 1px;
+    background-color: grey;
+    top: -60px;
+    filter: blur(1px);
+} */
+
+.razdel {
+    height: 100%;
+    width: 1px;
+    background-color: grey;
+    filter: blur(1px);
+}
+
+.cart_del_but {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    margin-top: calc((150px - 60px) / 2);
+    padding: 0;
+    background: url(/media/trash_icon.jpg);
+    background-size: cover;
+}
+
+#naming_delete {
+    width: 60px;
+    margin: auto 0;
+}
+
+/* #total_cost::before {
+    content: "Общая стоимость: ";
+}
+
+#total_cost::after {
+    content: " руб.";
+} */
+
+#total_cost {
+    padding-left: 10px;
+}
+
+.add-to-cart {
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background: url(/media/cart_icon.jpg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 769px) {
+    .picked_product {
+        width: 100vw;
+        flex-direction: column;
+    }
+
+    .picked_product_img_div {
+        width: 100%;
+    }
+    
+    .picked_product img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .picked_product_content {
+        font-size: 0.65em;
+        margin: 0 auto;
+        width: 80%;
+        padding: 0;
+    }
+    
+    .desc {
+        margin-top: 0;
+    }
+
+    .picked_product_exit {
+        width: 4vw;
+        height: 4vw;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .one-product {
+        width: 200px;
+        height: 200px;
+    }
+
+    .products {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .picked_product_content {
+        width: 90%;
+        padding: 0;
+    }
+
+    .add-to-cart {
+        width: 50px;
+        height: 50px;
+        bottom: 25px;
+        right: 25px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    #naming-item {
+        display: none;
+    }
+
+    .cart {
+        max-width: 80vw;
+        padding: 5px;
+    }
+     
+    .cart-item {
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        height: 150px;
+        position: relative;
+    }
+
+    .cart_img_div {
+        width: 40%;
+        min-width: 0px;
+        text-align: center;
+        /* max-width: 120px; */
+        /* background-color: rgb(183, 174, 174); */
+        /* background: url(/media/dark_choco1.jpg);
+        background-size: cover;
+        background-position: center; */
+        /* backdrop-filter: blur(10px); */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cart_img_div::before {
+        content: "";
+        width: 125%;
+        height: 125%;
+        position: absolute;
+        top: -12%;
+        left: -12%;
+        /* background: url(/media/dark_choco1.jpg); */
+        background-size: cover;
+        background-position: center;
+        filter: blur(7px);
+        z-index: 1; /* Помещаем псевдоэлемент под основной контент */
+    }
+
+    .cart-img-id-milk_choco1::before {
+        background: url(/media/milk_choco1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cart-img-id-milk_choco2::before {
+        background: url(/media/milk_choco2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cart-img-id-milk_choco3::before {
+        background: url(/media/milk_choco3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cart-img-id-milk_choco4::before {
+        background: url(/media/milk_choco4.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cart-img-id-white_choco1::before {
+        background: url(/media/white_choco1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cart-img-id-white_choco2::before {
+        background: url(/media/white_choco2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cart-img-id-white_choco3::before {
+        background: url(/media/white_choco3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cart-img-id-dark_choco1::before {
+        background: url(/media/dark_choco1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cart-img-id-dark_choco2::before {
+        background: url(/media/dark_choco2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cart-img-id-dark_choco3::before {
+        background: url(/media/dark_choco3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .cart-item img {
+        width: 100%;
+        height: 100%;
+        max-width: 120px;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .cart-item h4 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60%;
+        z-index: 100;
+        text-align: center;
+    }
+    
+    .cart-item .p_total_price, .cart-item .p_one_price {
+        width: auto;
+        margin: auto 0;
+        text-align: center;
+        word-wrap: nowrap;
+        position: absolute;
+        font-size: .9em;
+    }
+
+    .cart-item .p_total_price {
+        bottom: 5px;
+        left: 42%;
+    }
+
+    .cart-item .p_total_price::after {
+        content: " всего";
+    }
+
+    .cart-item .p_one_price {
+        left: 42%;
+        bottom: 25px;
+    }
+    
+    .cart-item .p_one_price::after {
+        content: " за 1 шт.";
+    }
+
+    .p_quantity {
+        /* line-height: 150px; */
+        margin: auto 0;
+        word-wrap: nowrap;
+    }
+    
+    .cart-item .div_quantity {
+        width: 40%;
+        margin: 0;
+        text-align: center;
+        /* position: relative; */
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: absolute;
+        bottom: 50px;
+        left: 42%;
+    }
+    
+    .cart_item_minus,
+    .cart_item_plus {
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        border: 1px solid black;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        background: none;
+    }
+    
+    .cart_item_minus::before {
+        content: "";
+        position: absolute;
+        width: 70%;
+        left: 15.5%;
+        top: 50%;
+        background-color: black;
+        height: 1px;
+    }
+    
+    .cart_item_plus::before {
+        content: "";
+        position: absolute;
+        width: 70%;
+        left: 15.5%;
+        top: 50%;
+        background-color: black;
+        height: 1px;
+    }
+    
+    .cart_item_plus::after {
+        content: "";
+        position: absolute;
+        height: 70%;
+        top: 15.5%;
+        left: 50%;
+        background-color: black;
+        width: 1px;
+    }
+    
+    .razdel {
+        display: none;
+    }
+    
+    .cart_del_but {
+        border-radius: 50%;
+        cursor: pointer;
+        height: 10vw;
+        width: 10vw;
+        margin-top: calc((150px - 60px) / 2);
+        padding: 0;
+        background: url(/media/trash_icon.jpg);
+        background-size: cover;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        max-width: 50px;
+        max-height: 50px;
+    }
+    
+    /* #total_cost::before {
+        content: "Общая стоимость: ";
+    }
+    
+    #total_cost::after {
+        content: " руб.";
+    } */
+}
+
+
